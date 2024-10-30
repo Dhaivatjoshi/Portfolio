@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d0cf56ab30.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+       <div class="container">
+        <nav>
+            <!-- <img src="images./logo.png" class="logo"> -->
+            <a href="index.html" class="logo">
+             <h1><span>D</span>haivat<span>.</span></h1>
+            </a>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <!-- <li><a href="#services">Services</a></li> -->
+                <!-- <li><a href="#portfolio">Portfolio</a></li> -->
+                <li><a href="#contact">Contact</a></li>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/dhaivatjoshi-dj/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/justelectronicx" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@JustElectronicX" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://github.com/Dhaivatjoshi?tab=repositories" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <div class="version">
+                    <p id="version-number"></p>
+                </div>
+                <i class="fa-solid fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Embedded Software Developer</p>
+            <h1>Hi, i'm <span>Dhaivat</span></h1>
+            <!-- <h3 class = "text-animation">I'm a <span></span></h3> -->
+            <h3 class="text-animation">I'm a <span id="typing-text"></span></h3>
+
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/dhaivatjoshi-dj/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/justelectronicx" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@JustElectronicX" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://github.com/Dhaivatjoshi?tab=repositories" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:dhaivatjoshi0106@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i></a>
+                <!-- <a href="tel:+919638713148" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-phone"></i></a> -->
+
+            </div>
+            <a href="images/my-cv.pdf" download class="btn1 btn2">Download CV</a>
+        </div>
+       </div> 
+    </div>
+
+    <!-- ----------about--------- -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1" id="slideshow">
+                </div>
+                    <!-- <img src="images/project/IMG_1.jpg"> -->
+                    <!-- <img id="slideshow" src="images/project/IMG_1.jpg" alt="Slideshow"> -->
+                    <!-- <div class="slide fade">
+                        <img src="images/project/IMG_1.jpg" class="slide-image" alt="Image 1">
+                    </div>
+                    <div class="slide fade">
+                        <img src="images/project/IMG_2.jpg" class="slide-image" alt="Image 2">
+                    </div>
+                    <div class="slide fade">
+                        <img src="images/project/IMG_3.jpg" class="slide-image" alt="Image 3">
+                    </div>
+                    <div class="slide fade">
+                        <img src="images/project/IMG_10.jpg" class="slide-image" alt="Image 4">
+                    </div> -->
+                
+                 <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="about-description">I am an experienced Embedded Software Developer with a strong foundation in both hardware and software, driven by a passion for innovation and technology. Currently pursuing a Master's degree in Electrical Engineering and Information Technology at Otto von Guerike University, I possess deep expertise in programming languages, microcontroller architectures, and real-time operating systems (RTOS) programming. My skills in integrating sensors, mastering communication protocols, and managing projects have enabled me to deliver high-quality solutions that enhance system performance. Eager to explore new challenges and contribute to the ever-evolving world of technology, I am committed to continuous learning, collaboration, and making a meaningful impact in the field.</p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>
+                                <h3>Embedded Software Developer</h3>
+                                <p>Embedded C | C++ | FreeRTOS | ROS | Python | PHP | HTML</p>
+                            </li>
+                            <li>
+                                <h3>PCB Desiging</h3>
+                                <p>Schematic and Layout(Routing)</p>   
+                            </li>
+                            <li>
+                                <h3>Robotics</h3>
+                                <p>RTOS and Micro-ROS</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>
+                                <h3>Embedded Software Developer</h3>
+                                <p><span>InSignEx</span></p>
+                                <p>06/2021 - 10/2023 | Anand, India</p>
+                            </li>
+                            <li>
+                                <h3>Project Internship</h3>
+                                <p><span>InSignEx</span></p>
+                                <p>01/2021 - 05/2021 | Anand, India</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>
+                                <h3>Master’s Degree in Electrical Engineering and Information Technology</h3>
+                                <p>Otto-von-Guericke University</p>
+                                <p><span>10/2023 - Present</span> | Magdeburg, Germany</p>
+                            </li>
+                            <li>
+                                <h3>B.Tech in Electronics and Communication</h3>
+                                <p>CHARUSAT University</p>
+                                <p><span>06/2017 - 05/2021</span> | Anand, India</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+<!-- --------------------Contact------------------ -->
+
+ <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p> <i class="fa-solid fa-paper-plane"></i> dhaivatjoshi0106@gmail.com</p>
+                <p> <i class="fa-solid fa-phone"></i> +91 9638713148</p>
+                <p> <i class =" fa-solid fa-location-dot"></i> Germany</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/dhaivatjoshi-dj/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/justelectronicx"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@JustElectronicX"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://github.com/Dhaivatjoshi?tab=repositories"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <div class="form-group">
+                        <input type="text" name="Name" id="name" class="input-field" required>
+                        <label for="name" class="floating-label">Enter Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" class="input-field" required>
+                        <label for="email" class="floating-label">Enter Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="Message" id="message" class="input-field" rows="4" required></textarea>
+                        <label for="message" class="floating-labels">Enter Your Message</label>
+                    </div>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                 <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © 2024 Dhaivat Joshi - All Rights Reserved.</p>
+    </div>
+ </div>
+<script src="script.js"></script>
+<!-- <script>
+    let currentImage = 1;
+    const totalImages = 16;
+
+    function updateImage() {
+        // Get the image element by its id
+        const imageElement = document.getElementById('slideshow');
+
+        // Increment the image counter, reset to 1 if greater than totalImages
+        currentImage = currentImage < totalImages ? currentImage + 1 : 1;
+
+        // Update the src attribute to the next image
+        imageElement.src = `images/project/IMG_${currentImage}.jpg`;
+    }
+
+    // Change the image every 2 seconds (2000 milliseconds)
+    setInterval(updateImage, 5000);
+</script> -->
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    let slideIndex = 0;
+    const slideshowContainer = document.getElementById('slideshow');
+    const totalImages = 18; // Number of images you have
+
+    // Create an array of image numbers
+    let imageNumbers = Array.from({ length: totalImages }, (_, i) => i + 1);
+
+    // Shuffle the array of image numbers
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    shuffle(imageNumbers); // Shuffle the image numbers before creating the slides
+
+    // Dynamically create slide elements for each image (now in random order)
+    imageNumbers.forEach((imgNum) => {
+      const slideDiv = document.createElement('div');
+      slideDiv.classList.add('slide', 'fade');
+
+      const imgElement = document.createElement('img');
+      imgElement.src = `images/project/IMG_${imgNum}.jpg`; // Image path
+      imgElement.classList.add('slide-image');
+      imgElement.alt = `Image ${imgNum}`;
+
+      slideDiv.appendChild(imgElement);
+      slideshowContainer.appendChild(slideDiv);
+    });
+
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    function showSlide() {
+      // Hide all slides by default and move them vertically off-screen
+      for (let i = 0; i < totalSlides; i++) {
+        slides[i].style.opacity = 0;
+        slides[i].style.transform = 'translateY(100%)'; // Vertical scroll effect
+      }
+
+      // Reset index if it's greater than the total number of slides
+      slideIndex = slideIndex >= totalSlides ? 0 : slideIndex;
+
+      // Display the current slide and bring it into view with vertical transition
+      slides[slideIndex].style.opacity = 1;
+      slides[slideIndex].style.transform = 'translateY(0)'; // Slide into view
+
+      // Increment slide index for the next slide
+      slideIndex++;
+
+      // Automatically change slide every 3 seconds
+      setTimeout(showSlide, 3000);
+    }
+
+    // Initialize slideshow
+    showSlide();
+  });
+</script>
+
+<script>
+
+const roles = ["PCB Designer", "Embedded Software Developer"];
+const typingText = document.getElementById("typing-text");
+let roleIndex = 0;
+let charIndex = 1;
+let isDeleting = false;
+let delay = 100;
+
+function type() {
+    const currentRole = roles[roleIndex];
+    typingText.textContent = currentRole.substring(0, charIndex);
+    
+    if (!isDeleting && charIndex < currentRole.length) {
+        charIndex++;
+        delay = 100;  // Typing speed
+    } else if (isDeleting && charIndex > 0) {
+        charIndex--;
+        delay = 50;   // Deleting speed
+    } else {
+        isDeleting = !isDeleting;
+        delay = 2000;  // Pause before changing role
+        if (!isDeleting) {
+            roleIndex = (roleIndex + 1) % roles.length;  // Move to next role
+        }
+    }
+    
+    setTimeout(type, delay);
+}
+
+document.addEventListener("DOMContentLoaded", type);
+</script>
+
+</body>
+</html>
