@@ -41,3 +41,7 @@ I am an experienced Embedded Software Developer with a strong foundation in both
 - **Location:** Germany
 
 Feel free to reach out to me through any of the social media links provided on the website.
+
+## Portfolio
+
+You can view my portfolio website [here](https://dhaivatjoshi.github.io/Portfolio/).
