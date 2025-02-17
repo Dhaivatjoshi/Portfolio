@@ -229,6 +229,12 @@ nav ul .version {
   font-size: 60px;
   font-weight: 600;
   color: #fff;
+  text-align: left;
+}
+
+.sub-titles {
+  display: none;
+  
 }
 
 .about-description {
@@ -693,8 +699,13 @@ nav .social-icons {
     font-size: 15px;
   }
 
-  .sub-title {
+  .sub-title, .sub-titles {
+    display : block;
     font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color : #fff;
+    text-align: left;
   }
 
   /* About Section and Slideshow Styling */
@@ -703,21 +714,42 @@ nav .social-icons {
     display: flex;
     flex-direction: column;
     align-items: center; /* Center the content horizontally */
-    margin-top: 20px;
+    margin-top: 5px;
   }
 
-  #about .row {
+  /* #about .row {
     flex-direction: column-reverse;
+  } */
+
+  #about .row {
+    display:flex;
+    flex-direction: column-reverse; /* Moves Column 2 (text) below Column 1 (image) */
+    align-items: center; /* Centers the content */
   }
-  
-  #about .about-col-1,
+    
+  /* #about .about-col-1,
   #about .about-col-2 {
     flex-basis: 100%;
     text-align: center;
+  } */
+  #about .about-col-1,
+  #about .about-col-2 {
+    flex-basis: 100%; /* Ensures they take full width in mobile */
+    text-align: center;
   }
-
+  
+  
   #about .about-col-1 {
     margin-bottom: 20px; /* Adds spacing between slideshow and text */
+  }
+  #about .about-col-1 {
+    position: relative; /* Keeps image inside */
+    display: flex;
+    justify-content: center; /* Center image */
+    align-items: center;
+    min-height: 300px; /* Adjust height to fit the image */
+    overflow: hidden;
+    width: 100%;
   }
 
   /* Slideshow Container (above About Me) */
@@ -733,11 +765,12 @@ nav .social-icons {
   } */
 
   /* Slideshow Image Adjustments */
-  #about .slide-image {
+  /* #about .slide-image {
     width: 100%;
-    max-height: 300px; /* Limit max-height */
+    max-height: 300px; 
     object-fit: contain;
-  }
+  } */
+
 
   /* Slideshow Transitions */
   #about .slide {
@@ -755,7 +788,7 @@ nav .social-icons {
   } */
 
   .about-description {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .tab-links {
