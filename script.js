@@ -31,8 +31,15 @@
 
     form.addEventListener('submit', e => {
         e.preventDefault();
+        spinner.style.display = 'inline-block';
+        submitButton.disabled = true;
+        submitButton.innerHTML = 'Sending...';
+
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => {
+
+                spinner.style.display = 'none';
+                submitButton.disabled = false;
                 msg.innerHTML = "Message sent successfully";
                 setTimeout(function(){
                     msg.innerHTML = "";
