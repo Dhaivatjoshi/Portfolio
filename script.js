@@ -31,6 +31,9 @@
 
     form.addEventListener('submit', e => {
         e.preventDefault();
+        const now = new Date();
+        const formattedDateTime = now.toLocaleString(); // You can customize the format
+        document.getElementById('datetime').value = formattedDateTime;
         msg.innerHTML = 'Sending...';
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => {
