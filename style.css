@@ -336,7 +336,7 @@ nav ul .version {
   display: block;
 }
 
-.tab-contents.company-link {
+.company-link {
   color: inherit;             /* stays the same color as the surrounding <span> */
   text-decoration: none;      /* no underline */
   display: inline-flex;
@@ -348,7 +348,7 @@ nav ul .version {
   text-decoration: none;      /* no underline */                 /* space between text and icon */
 }
 
-.tab-contents.company-link__icon {
+.company-link__icon {
   font-size: 0.8em;           /* small icon */
   opacity: 0.8;               /* subtle */
   line-height: 1;
@@ -356,7 +356,7 @@ nav ul .version {
 }
 
 /* Optional: tiny lift on hover (icon only) */
-.tab-contents.company-link:hover .company-link__icon {
+.company-link:hover .company-link__icon {
   transform: translateY(0);
   opacity: 1;
 }
