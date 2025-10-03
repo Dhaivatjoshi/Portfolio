@@ -336,30 +336,38 @@ nav ul .version {
   display: block;
 }
 
-.company-link {
-  color: inherit;             /* stays the same color as the surrounding <span> */
-  text-decoration: none;      /* no underline */
+/* Company links: keep text color, remove underline, show icon */
+a.company-link,
+a.company-link:link,
+a.company-link:visited {
+  color: inherit !important;     /* win against generic a{} rules */
+  text-decoration: none !important;
   display: inline-flex;
   align-items: center;
-  gap: 6.0px;                   /* space between text and icon */
+  gap: 6px;
 }
-.company-link span{
-  color: #ababab;            /* stays the same color as the surrounding <span> */
-  text-decoration: none;      /* no underline */                 /* space between text and icon */
+
+a.company-link:hover,
+a.company-link:active {
+  color: inherit;
+  text-decoration: none;
 }
 
 .company-link__icon {
-  font-size: 0.8em;           /* small icon */
-  opacity: 0.8;               /* subtle */
+  font-size: 0.8em;
+  opacity: 0.8;
   line-height: 1;
-  transform: translateY(1px); /* tiny vertical alignment tweak */
+  transform: translateY(1px);
 }
 
-/* Optional: tiny lift on hover (icon only) */
-.company-link:hover .company-link__icon {
+a.company-link:hover .company-link__icon {
   transform: translateY(0);
   opacity: 1;
 }
+
+/* If you want the text to be muted grey, set it directly on the link: */
+a.company-link.muted { color: #ababab !important; }
+
 
 /* -------------------Services---------------- */
 
