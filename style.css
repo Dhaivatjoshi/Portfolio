@@ -341,7 +341,7 @@ nav ul .version {
   text-decoration: none;      /* no underline */
   display: inline-flex;
   align-items: center;
-  gap: 6px;                   /* space between text and icon */
+  gap: 6.5px;                   /* space between text and icon */
 }
 
 .company-link__icon {
