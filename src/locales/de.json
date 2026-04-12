@@ -1,0 +1,34 @@
+{
+  "header": {
+    "home": "Startseite",
+    "about": "Über mich",
+    "projects": "Projekte",
+    "contact": "Kontakt",
+    "downloadCV": "CV Herunterladen"
+  },
+  "hero": {
+    "greeting": "Hallo, ich bin",
+    "title": "Embedded Software Entwickler & PCB Designer",
+    "im_a": "Ich bin",
+    "roles": ["Embedded Software Entwickler", "PCB Designer"]
+  },
+  "about": {
+    "title": "Über mich",
+    "description": "Ich bin ein erfahrener Embedded-Softwareentwickler mit einem starken Fundament in Hard- und Software, angetrieben von einer Leidenschaft für Innovation und Technologie. Derzeit absolviere ich mein Masterstudium in Elektrotechnik und Informationstechnik an der Otto-von-Guericke-Universität. Ich verfüge über fundierte Kenntnisse in Programmiersprachen, Mikrocontroller-Architekturen und Echtzeitbetriebssystemen (RTOS).",
+    "tabs": {
+      "experience": "Erfahrung",
+      "skills": "Fähigkeiten",
+      "education": "Ausbildung"
+    }
+  },
+  "projects": {
+    "title": "Meine Projekte"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "name": "Ihr Name",
+    "email": "Ihre E-Mail",
+    "message": "Ihre Nachricht",
+    "submit": "Absenden"
+  }
+}
