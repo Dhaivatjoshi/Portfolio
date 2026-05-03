@@ -172,7 +172,7 @@ const projectData: Project[] = [
 • Beide Systeme lassen sich zudem vollständig manuell steuern`,
     tags: ['IoT', 'Home Automation', 'Bluetooth', 'ESP8266'],
     category: 'Power Electronics',
-    image: ' images/project/IMG_7.jpg',
+    image: '/images/project/IMG_7.jpg',
 
   },
   {
