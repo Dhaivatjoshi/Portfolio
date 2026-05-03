@@ -76,7 +76,6 @@ const projectData: Project[] = [
       { type: 'image', src: '/images/project/IMG_2.jpg' },
       { type: 'image', src: '/images/project/IMG_2A.jpg' },
       { type: 'image', src: '/images/project/IMG_2B.jpg' },
-      { type: 'image', src: '/images/project/IMG_2C.jpg' },
     ]
   },
   {
