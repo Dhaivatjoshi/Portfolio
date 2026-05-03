@@ -350,6 +350,26 @@
   border-bottom-color: rgba(168, 85, 247, 0.2);
 }
 
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  background: var(--accent-cyan);
+  color: #000;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 900;
+  border-radius: 4px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.sys-block.mcu .step-num {
+  background: #a855f7;
+}
+
 .justify-center {
   justify-content: center;
 }

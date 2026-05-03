@@ -148,26 +148,32 @@ const Hero: React.FC = () => {
                   </>
                 ) : (
                   <>
+                ) : (
+                  <>
+                    {/* Simplified sequential flow for PCB */}
                     {/* Row 1 to Row 2 */}
-                    <path className="wire-path glow" d="M 120,80 L 120,110 L 240,110 L 240,130" />
-                    <path className="wire-path" d="M 120,80 L 120,110 L 240,110 L 240,130" markerEnd="url(#arrow)" />
-
-                    <path className="wire-path glow" d="M 360,80 L 360,110 L 240,110 L 240,130" />
-                    <path className="wire-path" d="M 360,80 L 360,110 L 240,110 L 240,130" markerEnd="url(#arrow)" />
+                    <path className="wire-path glow" d="M 80,80 L 80,110 L 240,110 L 240,130" />
+                    <path className="wire-path" d="M 80,80 L 80,110 L 240,110 L 240,130" markerEnd="url(#arrow)" />
+                    
+                    <path className="wire-path glow" d="M 400,80 L 400,110 L 240,110 L 240,130" />
+                    <path className="wire-path" d="M 400,80 L 400,110 L 240,110 L 240,130" markerEnd="url(#arrow)" />
 
                     {/* Row 2 to Row 3 */}
-                    <path className="wire-path glow" d="M 240,210 L 240,250" />
-                    <path className="wire-path" d="M 240,210 L 240,250" markerEnd="url(#arrow)" />
+                    <path className="wire-path glow" d="M 240,210 L 240,230 L 120,230 L 120,250" />
+                    <path className="wire-path" d="M 240,210 L 240,230 L 120,230 L 120,250" markerEnd="url(#arrow)" />
+
+                    <path className="wire-path glow" d="M 240,210 L 240,230 L 360,230 L 360,250" />
+                    <path className="wire-path" d="M 240,210 L 240,230 L 360,230 L 360,250" markerEnd="url(#arrow)" />
 
                     {/* Row 3 to Row 4 */}
-                    <path className="wire-path glow" d="M 240,320 L 240,340 L 80,340 L 80,360" />
-                    <path className="wire-path" d="M 240,320 L 240,340 L 80,340 L 80,360" markerEnd="url(#arrow)" />
+                    <path className="wire-path glow" d="M 120,310 L 120,340" />
+                    <path className="wire-path" d="M 120,310 L 120,340" markerEnd="url(#arrow)" />
 
-                    <path className="wire-path glow" d="M 240,320 L 240,360" />
-                    <path className="wire-path" d="M 240,320 L 240,360" markerEnd="url(#arrow)" />
+                    <path className="wire-path glow" d="M 240,310 L 240,340" />
+                    <path className="wire-path" d="M 240,310 L 240,340" markerEnd="url(#arrow)" />
 
-                    <path className="wire-path glow" d="M 240,320 L 240,340 L 400,340 L 400,360" />
-                    <path className="wire-path" d="M 240,320 L 240,340 L 400,340 L 400,360" markerEnd="url(#arrow)" />
+                    <path className="wire-path glow" d="M 360,310 L 360,340" />
+                    <path className="wire-path" d="M 360,310 L 360,340" markerEnd="url(#arrow)" />
                   </>
                 )}
               </svg>
@@ -223,48 +229,64 @@ const Hero: React.FC = () => {
                   </>
                 ) : (
                   <>
-                    {/* Row 1 */}
+                    {/* Row 1: Schematic Prep */}
                     <div className="sys-block small span-3">
-                      <div className="sys-block-header justify-center"><Cpu size={14} /> Architecture</div>
-                      <div className="sys-block-body text-center dim">Specs &amp; Block Diag</div>
-                    </div>
-                    <div className="sys-block small span-3">
-                      <div className="sys-block-header justify-center"><Box size={14} /> Sourcing</div>
-                      <div className="sys-block-body text-center dim">DigiKey BOM</div>
-                    </div>
-
-                    {/* Row 2 */}
-                    <div className="sys-block small span-6">
-                      <div className="sys-block-header justify-center"><PenTool size={16} /> Schematic Capture</div>
-                      <div className="sys-block-body mcu-tasks">
-                        <span className="task">Symbol Libs</span>
-                        <span className="task">ERC Rules</span>
-                        <span className="task">Netlists</span>
+                      <div className="sys-block-header justify-center">
+                        <span className="step-num">1</span> <PenTool size={14} /> Schematic Capture
                       </div>
+                      <div className="sys-block-body text-center dim">Symbols & Netnames</div>
+                    </div>
+                    <div className="sys-block small span-3">
+                      <div className="sys-block-header justify-center">
+                        <span className="step-num">2</span> <Activity size={14} /> Rules Check
+                      </div>
+                      <div className="sys-block-body text-center dim">ERC & Footprint Assoc</div>
                     </div>
 
-                    {/* Row 3 */}
+                    {/* Row 2: Layout Design */}
                     <div className="sys-block mcu span-6">
-                      <div className="sys-block-header justify-center"><Layers size={16} /> PCB Layout &amp; Routing</div>
+                      <div className="sys-block-header justify-center">
+                        <span className="step-num">3</span> <Layers size={16} /> PCB Layout Workflow
+                      </div>
                       <div className="sys-block-body mcu-tasks">
-                        <span className="task">4-Layer Stackup</span>
-                        <span className="task">Impedance Ctrl</span>
-                        <span className="task">DRC Checks</span>
+                        <span className="task">Outline & Constraints</span>
+                        <span className="task">Component Placement</span>
+                        <span className="task">Routing & Silkscreen</span>
                       </div>
                     </div>
 
-                    {/* Row 4 */}
+                    {/* Row 3: Verification */}
+                    <div className="sys-block small span-3">
+                      <div className="sys-block-header justify-center">
+                        <span className="step-num">4</span> <Box size={14} /> Design Rules
+                      </div>
+                      <div className="sys-block-body text-center dim">DRC & Error Fixing</div>
+                    </div>
+                    <div className="sys-block small span-3">
+                      <div className="sys-block-header justify-center">
+                        <span className="step-num">5</span> <Terminal size={14} /> Gerber Export
+                      </div>
+                      <div className="sys-block-body text-center dim">Gerber & Drill Prep</div>
+                    </div>
+
+                    {/* Row 4: Manufacturing */}
                     <div className="sys-block small span-2">
-                      <div className="sys-block-header justify-center"><Zap size={12} /> Fab</div>
-                      <div className="sys-block-body text-center dim">Gerber/Drill</div>
+                      <div className="sys-block-header justify-center">
+                        <Settings size={12} /> Fab
+                      </div>
+                      <div className="sys-block-body text-center dim">External Fab</div>
                     </div>
                     <div className="sys-block small span-2">
-                      <div className="sys-block-header justify-center"><Settings size={12} /> Test</div>
-                      <div className="sys-block-body text-center dim">JTAG Verify</div>
+                      <div className="sys-block-header justify-center">
+                        <Activity size={12} /> Test
+                      </div>
+                      <div className="sys-block-body text-center dim">Verify Connectivity</div>
                     </div>
                     <div className="sys-block small span-2">
-                      <div className="sys-block-header justify-center"><CheckCircle size={12} /> PCBA</div>
-                      <div className="sys-block-body text-center dim">Pick &amp; Place</div>
+                      <div className="sys-block-header justify-center">
+                        <CheckCircle size={12} /> PCBA
+                      </div>
+                      <div className="sys-block-body text-center dim">Pick & Place</div>
                     </div>
                   </>
                 )}

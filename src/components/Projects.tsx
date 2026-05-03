@@ -65,16 +65,16 @@ Diese Lösung ist kostengünstig für die GPS-Datenaufzeichnung mittels Arduino 
     id: 2,
     title: 'Smart Helmet Module',
     titleDe: 'Smartes Helm-Modul',
-    description: `• The project involves an automatic accident detection module mounted on a helmet
-• The module is designed to detect accidents and trigger an alarm
-• A mobile application is integrated with the module to inform predefined emergency contact numbers
-• The mobile application provides all details of the victim including their live location
-• The system is designed to ensure prompt emergency response and minimize the severity of injuries resulting from accidents`,
-    descriptionDe: `• Das Projekt umfasst ein automatisches Unfallerkennungsmodul, das an einem Helm montiert ist
-• Das Modul ist darauf ausgelegt, Unfälle zu erkennen und einen Alarm auszulösen
-• Eine mobile Anwendung ist integriert, um vordefinierte Notfallkontakte zu informieren
-• Die mobile Anwendung liefert alle Details des Opfers, einschließlich seines Live-Standorts
-• Das System sorgt für eine schnelle Notfallreaktion und minimiert die Schwere von Verletzungen`,
+    description: `This project features an automatic accident detection module designed to be mounted on a safety helmet. The primary objective is to detect collisions or falls and immediately trigger an alarm system for rapid emergency response.
+
+The module is integrated with a dedicated mobile application that automatically notifies predefined emergency contacts. This application provides critical victim details, including their real-time location, ensuring that medical assistance can be dispatched precisely where it is needed most.
+
+By combining hardware sensors with mobile connectivity, this system significantly reduces response times during emergencies, potentially saving lives and minimizing the severity of injuries resulting from accidents.`,
+    descriptionDe: `Dieses Projekt umfasst ein automatisches Unfallerkennungsmodul für Schutzhelme. Ziel ist es, Stürze oder Kollisionen sofort zu erkennen und ein Alarmsystem für eine schnelle Notfallreaktion auszulösen.
+
+Das Modul ist mit einer mobilen Anwendung verbunden, die vordefinierte Notfallkontakte automatisch benachrichtigt. Die App liefert wichtige Details zum Opfer, einschließlich des Echtzeit-Standorts, um eine präzise Rettung zu ermöglichen.
+
+Durch die Kombination von Hardware-Sensoren und mobiler Konnektivität verkürzt dieses System die Reaktionszeiten in Notfällen erheblich und minimiert so die Schwere von Unfallfolgen.`,
     tags: ['Accident Detection', 'IoT', 'Mobile App', 'Safety'],
     category: 'Sensor Modules',
     image: '/images/project/IMG_2.jpg',
@@ -88,18 +88,16 @@ Diese Lösung ist kostengünstig für die GPS-Datenaufzeichnung mittels Arduino 
     id: 3,
     title: 'RGB Touch Plant Using Arduino',
     titleDe: 'RGB-Touch-Pflanze mit Arduino',
-    description: `• Built an RGB Touch plant to be controlled by an Arduino Pro Mini
-• The device requires 3 RGB-LED strips and 3 npn transistors to control 12v RGB led strips
-• Requires several passive components and a 3v3 LDO to convert 12v to 3.3v to power the controller
-• Features of the project include up to 20 different static colours, 1 random fade in-fade-out animation, and capacitive touch sensing
-• Optional IR controller also included
-• The project utilizes capacitive touch, and the Arduino detects the conductive object when someone touches the plant leaves, which results in a change in the RGB LED colour. The RGB light can also be controlled via the IR Remote`,
-    descriptionDe: `• Entwicklung einer RGB-Touch-Pflanze, die von einem Arduino Pro Mini gesteuert wird
-• Das Gerät benötigt 3 RGB-LED-Streifen und 3 npn-Transistoren zur Steuerung von 12V-LED-Streifen
-• Verwendet passive Komponenten und einen 3v3 LDO zur Stromversorgung des Controllers
-• Das Projekt bietet bis zu 20 statische Farben, 1 zufällige Fade-Animation und kapazitive Berührungserkennung
-• Ein optionaler IR-Controller ist ebenfalls enthalten
-• Berührt jemand die Pflanzenblätter, erkennt der Arduino dies über kapazitive Berührung und ändert die LED-Farbe. Das Licht kann auch per IR-Fernbedienung gesteuert werden`,
+    description: `This unique project combines nature with technology by creating an interactive RGB LED system controlled via an Arduino Pro Mini. It utilizes capacitive touch sensing to detect human interaction with plant leaves, triggering dynamic color changes.
+
+The hardware setup includes three RGB LED strips driven by NPN transistors to handle high-current 12V loads. A 3.3V LDO regulator ensures the microcontroller receives stable power, while passive components filter noise for reliable touch detection.
+
+The system features 20 static colors and a random fade animation. For added convenience, an optional IR remote controller is integrated, allowing users to customize the lighting effects wirelessly.`,
+    descriptionDe: `Dieses Projekt verbindet Natur mit Technik durch ein interaktives RGB-LED-System, das über einen Arduino Pro Mini gesteuert wird. Es nutzt kapazitive Berührungssensoren, um Interaktionen mit den Blättern einer Pflanze zu erkennen und dynamische Farbwechsel auszulösen.
+
+Das Hardware-Setup umfasst drei RGB-LED-Streifen, die über NPN-Transistoren für 12V-Lasten angesteuert werden. Ein 3,3V-LDO-Regler sorgt für eine stabile Stromversorgung, während passive Komponenten eine zuverlässige Berührungserkennung gewährleisten.
+
+Das System bietet 20 statische Farben und eine Zufalls-Animation. Zusätzlich ist eine IR-Fernbedienung integriert, mit der die Lichteffekte bequem drahtlos gesteuert werden können.`,
     tags: ['Arduino Pro Mini', 'Capacitive Touch', 'RGB LED', 'IR Remote'],
     category: 'MCU Boards',
     image: '/images/project/IMG_3.jpg',
@@ -112,20 +110,16 @@ Diese Lösung ist kostengünstig für die GPS-Datenaufzeichnung mittels Arduino 
     id: 4,
     title: 'Third Eye',
     titleDe: 'Drittes Auge',
-    description: `• Third Eye for the Blind is an innovative device that helps visually impaired people navigate their surroundings
-• The device uses ultrasonic waves to detect nearby obstacles and alerts the user through a buzzer sound or vibration
-• It is a multidisciplinary project that involves the fields of computer science, electronics engineering, and health science
-• The device provides blind people with increased speed and confidence in their ability to travel independently
-• When the sensor detects an object, the user is immediately notified through a beep or vibration, allowing them to react accordingly
-• The device is fully automated and does not require any manual operation, making it easy and convenient for the user
-• Third Eye for the Blind has the potential to significantly improve the quality of life for visually impaired individuals by enabling them to travel to different places with greater ease and safety`,
-    descriptionDe: `• Third Eye for the Blind ist ein innovatives Gerät, das sehbehinderten Menschen hilft, sich in ihrer Umgebung zurechtzufinden
-• Das Gerät nutzt Ultraschallwellen zur Hinderniserkennung und warnt den Benutzer durch einen Summton oder Vibration
-• Ein multidisziplinäres Projekt aus den Bereichen Informatik, Elektronik und Gesundheitswissenschaften
-• Das Gerät gibt blinden Menschen mehr Geschwindigkeit und Selbstvertrauen beim unabhängigen Reisen
-• Wenn der Sensor ein Objekt erkennt, wird der Benutzer sofort benachrichtigt, um entsprechend reagieren zu können
-• Das Gerät ist vollautomatisiert und erfordert keine manuelle Bedienung
-• Es hat das Potenzial, die Lebensqualität von Sehbehinderten deutlich zu verbessern`,
+    description: `Third Eye for the Blind is an assistive technology device designed to enhance the mobility and independence of visually impaired individuals. It uses ultrasonic waves to scan the environment for obstacles and provides real-time feedback to the user.
+
+When an obstacle is detected within range, the device alerts the user through haptic vibrations or audible buzzer sounds. This multidisciplinary project bridges the gap between electronics engineering, computer science, and healthcare technology.
+
+The system is fully automated and requires no manual input, allowing users to navigate unfamiliar surroundings with increased confidence, speed, and safety.`,
+    descriptionDe: `Third Eye for the Blind ist ein assistives Gerät, das die Mobilität und Unabhängigkeit sehbehinderter Menschen verbessert. Es nutzt Ultraschallwellen, um die Umgebung nach Hindernissen zu scannen und liefert dem Benutzer Echtzeit-Feedback.
+
+Sobald ein Hindernis erkannt wird, warnt das Gerät den Benutzer durch Vibrationen oder akustische Signale. Dieses multidisziplinäre Projekt verbindet Elektronik, Informatik und Medizintechnik.
+
+Das System arbeitet vollautomatisch und ermöglicht es Benutzern, sich in unbekannten Umgebungen mit mehr Vertrauen und Sicherheit zu bewegen.`,
     tags: ['Ultrasonic', 'Accessibility', 'Sensor', 'Vibration'],
     category: 'Sensor Modules',
     image: '/images/project/IMG_4.jpg',
@@ -134,14 +128,16 @@ Diese Lösung ist kostengünstig für die GPS-Datenaufzeichnung mittels Arduino 
     id: 5,
     title: 'Voice Activated Scrolling Display',
     titleDe: 'Sprachgesteuerte Laufschrift-Anzeige',
-    description: `• Developed an IoT Voice-activated scrolling display using Node MCU (ESP8266) and P10 LED matrix panels, allowing wireless control via an Android app
-• Designed schematic and PCB layouts using KiCad and fabricated the PCB using the Ferric Chloride etching process for efficient prototyping
-• Utilized MQTT protocol for global connectivity, enabling remote updates and live control of the display over the internet from any location
-• Developed a customized Android app in Kodular for seamless voice-command functionality, supporting dynamic content updates on the LED display with high visibility and user flexibility`,
-    descriptionDe: `• Entwicklung einer sprachgesteuerten IoT-Laufschrift-Anzeige mit Node MCU (ESP8266) und P10 LED-Matrix-Panels, drahtlos steuerbar über eine Android-App
-• Schaltplan- und PCB-Layout-Design mit KiCad sowie PCB-Fertigung durch Eisen-III-Chlorid-Ätzverfahren für effizientes Prototyping
-• Nutzung des MQTT-Protokolls für globale Konnektivität, was Remote-Updates und Live-Steuerung über das Internet ermöglicht
-• Entwicklung einer maßgeschneiderten Android-App in Kodular für nahtlose Sprachbefehle und dynamische Inhaltsaktualisierungen`,
+    description: `This IoT-based project features a high-visibility scrolling LED display controlled via voice commands. It is powered by a NodeMCU (ESP8266) and utilizes P10 LED matrix panels for a professional-grade visual output.
+
+The system leverages the MQTT protocol for global connectivity, enabling users to update the display content remotely from anywhere in the world. A custom Android application provides a seamless interface for voice interaction and content management.
+
+The hardware was designed and prototyped using KiCad, with the final PCB fabricated via a chemical etching process to ensure reliability and performance in a compact form factor.`,
+    descriptionDe: `Dieses IoT-Projekt umfasst eine gut sichtbare LED-Laufschriftanzeige, die per Sprachbefehl gesteuert wird. Basierend auf einem NodeMCU (ESP8266) und P10 LED-Matrix-Panels bietet es eine professionelle Anzeige.
+
+Das System nutzt das MQTT-Protokoll für globale Konnektivität, sodass Inhalte von überall auf der Welt aktualisiert werden können. Eine maßgeschneiderte Android-App dient als nahtlose Schnittstelle für Sprachbefehle und Inhaltsverwaltung.
+
+Die Hardware wurde mit KiCad entworfen und prototypisiert, wobei die finale Leiterplatte durch chemisches Ätzen für maximale Zuverlässigkeit gefertigt wurde.`,
     tags: ['ESP8266', 'P10 Matrix', 'MQTT', 'Voice Control'],
     category: 'MCU Boards',
     image: '/images/project/IMG_5.jpg',
@@ -150,18 +146,16 @@ Diese Lösung ist kostengünstig für die GPS-Datenaufzeichnung mittels Arduino 
     id: 6,
     title: 'USBASP AVR Programmer',
     titleDe: 'USBASP AVR-Programmiergerät',
-    description: `• USBasp is an in-circuit programmer designed for Atmel AVR controllers
-• It utilizes an ATMega88 or ATMega8 microcontroller along with a few passive components
-• The programmer uses a firmware-only USB driver, eliminating the need for a special USB controller
-• In System Programming (ISP) is the preferred method for programming AVR microcontrollers as it allows them to be programmed in-circuit
-• AVR ISP is the tool used for programming AVR microcontrollers
-• Arduino boards utilize the simplest and cheapest options for AVR ISP programming`,
-    descriptionDe: `• USBasp ist ein In-Circuit-Programmiergerät für Atmel AVR-Controller
-• Es verwendet einen ATMega88- oder ATMega8-Mikrocontroller sowie einige passive Komponenten
-• Das Gerät nutzt einen reinen Firmware-USB-Treiber und benötigt keinen speziellen USB-Controller
-• In System Programming (ISP) ist die bevorzugte Methode, da AVR-Mikrocontroller in der Schaltung programmiert werden können
-• AVR ISP ist das Standardwerkzeug für die AVR-Programmierung
-• Arduino-Boards verwenden die einfachsten und günstigsten Optionen für die AVR ISP-Programmierung`,
+    description: `USBasp is an essential tool for embedded developers, providing an efficient in-circuit programming solution for Atmel AVR microcontrollers. It is built around an ATmega8 or ATmega88 microcontroller and utilizes a firmware-only USB driver.
+
+This design eliminates the need for specialized USB controller chips, making it a cost-effective and accessible programmer for development. It supports In-System Programming (ISP), allowing chips to be updated directly in the circuit.
+
+The project follows industry-standard AVR ISP protocols, ensuring compatibility with a wide range of microcontrollers and providing a robust interface for firmware deployment.`,
+    descriptionDe: `USBasp ist ein essentielles Werkzeug für Embedded-Entwickler und bietet eine effiziente In-Circuit-Programmierlösung für Atmel AVR-Mikrocontroller. Es basiert auf einem ATmega8 oder ATmega88 und nutzt einen reinen Firmware-USB-Treiber.
+
+Dieses Design macht spezialisierte USB-Controller-Chips überflüssig und bietet einen kostengünstigen Programmierer. Es unterstützt In-System-Programming (ISP), wodurch Chips direkt in der Schaltung aktualisiert werden können.
+
+Das Projekt folgt dem AVR-ISP-Standard und gewährleistet Kompatibilität mit einer Vielzahl von Mikrocontrollern für eine zuverlässige Firmware-Bereitstellung.`,
     tags: ['AVR', 'ISP', 'USBasp', 'ATMega8'],
     category: 'MCU Boards',
     image: '/images/project/IMG_6.jpg',
@@ -170,12 +164,16 @@ Diese Lösung ist kostengünstig für die GPS-Datenaufzeichnung mittels Arduino 
     id: 7,
     title: 'IOT, Bluetooth and IR Controlled Home Automation',
     titleDe: 'IoT-, Bluetooth- und IR-gesteuerte Hausautomation',
-    description: `• Designed and developed an Atmega328p microcontroller-based home automation system, which consists of 10 relays controlling various home appliances. The system can be controlled by a Bluetooth app. The app was created using the Kodular platform. The system uses an HC-05 module for Bluetooth communication and also includes an IR receiver module for additional control options
-• Designed and developed an ESP8266 microcontroller-based IOT home automation system, which consists of 4 relays and 1 fan speed control module. The system can be controlled by Google Assistant and Blynk APP
-• Both IOT and Bluetooth-based home automation systems can also be controlled manually`,
-    descriptionDe: `• Entwicklung eines Atmega328p-basierten Hausautomationssystems mit 10 Relais zur Steuerung diverser Haushaltsgeräte. Das System wird über eine mit Kodular erstellte Bluetooth-App gesteuert. Zur Kommunikation wird ein HC-05-Modul genutzt; ein IR-Empfänger bietet zusätzliche Optionen
-• Entwicklung eines ESP8266-basierten IoT-Systems mit 4 Relais und 1 Lüfterdrehzahl-Steuermodul. Steuerbar über Google Assistant und die Blynk-App
-• Beide Systeme lassen sich zudem vollständig manuell steuern`,
+    description: `This project involves the design and implementation of two distinct home automation platforms. The first is an ATmega328p-based system capable of controlling up to ten high-power appliances via a 10-relay board, featuring Bluetooth connectivity and IR remote support.
+
+The second platform utilizes an ESP8266 (NodeMCU) for IoT-enabled control. It manages four relays and includes a specialized module for fan speed adjustment, allowing for seamless integration with Google Assistant and the Blynk mobile ecosystem.
+
+Both systems provide the flexibility of manual overrides alongside their smart features, offering a reliable and versatile solution for modern smart home integration.`,
+    descriptionDe: `Dieses Projekt umfasst zwei verschiedene Hausautomations-Plattformen. Das erste ist ein ATmega328p-basiertes System zur Steuerung von bis zu zehn Geräten über Relais, inklusive Bluetooth- und IR-Steuerung.
+
+Die zweite Plattform nutzt einen ESP8266 (NodeMCU) für die IoT-Steuerung. Sie verwaltet vier Relais und ein Modul zur Lüftersteuerung, integriert in Google Assistant und das Blynk-Ökosystem.
+
+Beide Systeme bieten manuelle Steuerungsmöglichkeiten neben den Smart-Funktionen und stellen so eine vielseitige Lösung für die moderne Hausautomation dar.`,
     tags: ['IoT', 'Home Automation', 'Bluetooth', 'ESP8266'],
     category: 'Power Electronics',
     image: '/images/project/IMG_7.jpg',
@@ -185,14 +183,16 @@ Diese Lösung ist kostengünstig für die GPS-Datenaufzeichnung mittels Arduino 
     id: 8,
     title: 'IOT SPY ROBOT',
     titleDe: 'IoT Spionage-Roboter',
-    description: `• Spy robots are compact, remotely controlled robots equipped with a CCD camera and LED lighting for video transmission, even in dark areas.
-• They include a wireless camera, antenna, batteries, and four Omni wheels for enhanced mobility.
-• Radio Frequency modules enable wireless control via two PIC microcontrollers, managing motor functions.
-• Three Brush DC motors are driven by dual L298N modules for efficient movement control.`,
-    descriptionDe: `• Spionageroboter sind kompakte, ferngesteuerte Roboter mit CCD-Kamera und LED-Beleuchtung zur Videoübertragung, selbst in dunklen Bereichen.
-• Sie verfügen über eine drahtlose Kamera, Antenne, Batterien und vier Omni-Räder für verbesserte Mobilität.
-• RF-Module ermöglichen die drahtlose Steuerung über zwei PIC-Mikrocontroller, die die Motorfunktionen verwalten.
-• Drei DC-Bürstenmotoren werden über zwei L298N-Module für effiziente Bewegungssteuerung angetrieben.`,
+    description: `The IoT Spy Robot is a compact, remotely operated vehicle designed for reconnaissance and surveillance missions. It features a high-definition CCD camera and integrated LED lighting for live video transmission in both daylight and low-light environments.
+
+The robot is built on a four-wheel chassis using Omni wheels for superior maneuverability in tight spaces. Its drivetrain consists of three high-torque DC motors driven by dual L298N H-bridge modules for precise motion control.
+
+A wireless communication system, powered by PIC microcontrollers and RF modules, ensures reliable control over extended ranges, making it an effective tool for remote monitoring applications.`,
+    descriptionDe: `Der IoT-Spionageroboter ist ein kompaktes, ferngesteuertes Fahrzeug für Aufklärungsmissionen. Er verfügt über eine CCD-Kamera und LED-Beleuchtung für die Live-Videoübertragung bei Tag und Nacht.
+
+Das Fahrzeug nutzt Omni-Räder für maximale Wendigkeit auf engem Raum. Der Antrieb besteht aus drei DC-Motoren und L298N-Treibern für eine präzise Steuerung.
+
+Ein drahtloses Kommunikationssystem auf Basis von PIC-Mikrocontrollern und RF-Modulen garantiert eine zuverlässige Steuerung über große Entfernungen für Fernüberwachungsanwendungen.`,
     tags: ['Robotics', 'IoT', 'Wireless Video', 'Motor Control'],
     category: 'Motor Control',
     image: '/images/project/IMG_8.jpg',
