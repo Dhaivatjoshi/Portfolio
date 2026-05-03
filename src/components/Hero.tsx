@@ -148,8 +148,6 @@ const Hero: React.FC = () => {
                   </>
                 ) : (
                   <>
-                ) : (
-                  <>
                     {/* Simplified sequential flow for PCB */}
                     {/* Row 1 to Row 2 */}
                     <path className="wire-path glow" d="M 80,80 L 80,110 L 240,110 L 240,130" />
