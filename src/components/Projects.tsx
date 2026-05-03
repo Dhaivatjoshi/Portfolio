@@ -33,18 +33,24 @@ const projectData: Project[] = [
     id: 1,
     title: 'GPS Data Logger',
     titleDe: 'GPS-Datenlogger',
-    description: `• The paper introduces a GPS Data Logger that utilizes Arduino and an SD card to read and log GPS location and time
-• The system consists of an Arduino Uno, a GPS receiver, an SD card module, and a voltage regulator
-• The Arduino Uno is used to control the system, the GPS receiver is used to obtain the current location, the SD card module is used to store the logged data, and the voltage regulator is used to provide a stable power supply for the system
-• The system was tested in different locations and proved to accurately log the location and time of each point
-• The system is capable of storing up to 1000 points before requiring a reset
-• The solution provided by this paper is cost-effective for GPS data logging using Arduino and an SD card`,
-    descriptionDe: `• Die Arbeit stellt einen GPS-Datenlogger vor, der Arduino und eine SD-Karte verwendet, um GPS-Ort und Zeit zu erfassen
-• Das System besteht aus einem Arduino Uno, einem GPS-Empfänger, einem SD-Kartenmodul und einem Spannungsregler
-• Der Arduino Uno steuert das System, der GPS-Empfänger ermittelt den aktuellen Standort, das SD-Kartenmodul speichert die Daten und der Regler liefert eine stabile Stromversorgung
-• Das System wurde an verschiedenen Orten getestet und protokollierte zuverlässig Ort und Zeit
-• Das System kann bis zu 1000 Punkte speichern, bevor ein Reset erforderlich ist
-• Diese Lösung ist kostengünstig für die GPS-Datenaufzeichnung mittels Arduino und SD-Karte`,
+    description: `This project presents a GPS data logging system built using an Arduino Uno and an SD card. The system is designed to record location coordinates and time data from a GPS module.
+
+It includes four main components: the Arduino Uno, a GPS receiver, an SD card module, and a voltage regulator. The Arduino acts as the controller, managing communication between all components. The GPS receiver obtains real-time location and time information from satellites, while the SD card module stores this data for later use. The voltage regulator ensures a stable power supply for reliable operation.
+
+The system was tested across multiple locations and was able to accurately log position and time at each point. It can store up to 1000 data entries before requiring a reset.
+
+Overall, this project demonstrates a simple and cost-effective method for GPS data logging using Arduino and an SD card.`,
+    descriptionDe: `Die Arbeit stellt einen GPS-Datenlogger vor, der Arduino und eine SD-Karte verwendet, um GPS-Ort und Zeit zu erfassen
+
+Das System besteht aus einem Arduino Uno, einem GPS-Empfänger, einem SD-Kartenmodul und einem Spannungsregler
+
+Der Arduino Uno steuert das System, der GPS-Empfänger ermittelt den aktuellen Standort, das SD-Kartenmodul speichert die Daten und der Regler liefert eine stabile Stromversorgung
+
+Das System wurde an verschiedenen Orten getestet und protokollierte zuverlässig Ort und Zeit
+
+Das System kann bis zu 1000 Punkte speichern, bevor ein Reset erforderlich ist
+
+Diese Lösung ist kostengünstig für die GPS-Datenaufzeichnung mittels Arduino und SD-Karte`,
     tags: ['Arduino', 'GPS', 'SD Card', 'Data Logging'],
     category: 'MCU Boards',
     image: '/images/project/IMG_1.jpg',
