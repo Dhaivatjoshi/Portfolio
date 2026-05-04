@@ -5,7 +5,7 @@ import './Footer.css';
 
 const Footer: React.FC = () => {
   const { language } = useLanguage();
-  const currentYear = new Date().getFullYear();
+  // const currentYear = new Date().getFullYear();
 
   return (
     <footer className="footer-section">
