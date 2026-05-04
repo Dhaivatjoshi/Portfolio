@@ -12,9 +12,9 @@ const Footer: React.FC = () => {
       <div className="footer-divider"></div>
       <div className="container footer-content">
         <div className="footer-bottom">
-          <div className="footer-copyright">
+          {/* <div className="footer-copyright">
             © {currentYear} Dhaivat Joshi. {language === 'en' ? 'All rights reserved.' : 'Alle Rechte vorbehalten.'}
-          </div>
+          </div> */}
 
           <div className="footer-made-with">
             {language === 'en' ? 'Made with' : 'Erstellt mit'}{' '}
