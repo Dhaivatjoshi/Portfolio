@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Cpu, Zap, Github, Linkedin, Instagram, Youtube, Mail, Terminal, Coffee, Moon, Repeat } from 'lucide-react';
+import { ArrowRight, Cpu, Zap, Github, Linkedin, Instagram, Youtube, Mail } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import './Hero.css';
 
