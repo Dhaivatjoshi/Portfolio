@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Cpu, Zap, Github, Linkedin, Instagram, Youtube, Mail, CheckCircle, Terminal, Wifi, Activity, Settings, PenTool, Box, Layers } from 'lucide-react';
+import { ArrowRight, Cpu, Zap, Github, Linkedin, Instagram, Youtube, Mail, Terminal, Coffee, Moon, Repeat } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import './Hero.css';
 
 const Hero: React.FC = () => {
   const { language } = useLanguage();
-  const [activeDiagram, setActiveDiagram] = useState<'hardware' | 'pcb'>('hardware');
   const [isDesktop, setIsDesktop] = useState(true);
 
   useEffect(() => {
-    // Determine if on desktop to completely unmount the diagram on mobile
     const checkSize = () => setIsDesktop(window.innerWidth > 1024);
-    checkSize(); // Initial check
+    checkSize();
     window.addEventListener('resize', checkSize);
     return () => window.removeEventListener('resize', checkSize);
   }, []);
@@ -64,7 +62,7 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Stats grid — kept below on both breakpoints */}
+          {/* Stats grid */}
           <div className="hero-stats">
             <div className="stat-item glass-panel">
               <Cpu className="stat-icon" />
@@ -96,204 +94,78 @@ const Hero: React.FC = () => {
             </div>
           </div>
         </div>
+        {/* ── END LEFT ─────────────────────────────── */}
 
-        {/* ── RIGHT: Complex Architecture Diagram (desktop only) ── */}
+        {/* ── RIGHT: Routine Diagram (desktop only) ── */}
         {isDesktop && (
           <div className="hero-visual" aria-hidden="true">
-            <div className="system-block-diagram">
-
-            <div className="diagram-toggle">
-              <button className={activeDiagram === 'hardware' ? 'active' : ''} onClick={() => setActiveDiagram('hardware')}>
-                Architecture
-              </button>
-              <button className={activeDiagram === 'pcb' ? 'active' : ''} onClick={() => setActiveDiagram('pcb')}>
-                PCB Flow
-              </button>
-            </div>
-
             <div className="diagram-wrapper">
-              {/* SVG Wires Layer */}
-              <svg className="diagram-wires" viewBox="0 0 480 440" preserveAspectRatio="none">
+              <svg className="diagram-svg" viewBox="0 0 480 480" preserveAspectRatio="xMidYMid meet">
                 <defs>
-                  <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
-                    <path d="M 0 0 L 10 5 L 0 10 z" fill="rgba(0, 240, 255, 0.5)" />
+                  <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                   </marker>
                 </defs>
 
-                {activeDiagram === 'hardware' ? (
-                  <>
-                    {/* Row 1 to Row 2 */}
-                    <path className="wire-path glow" d="M 80,80 L 80,110 L 240,110 L 240,130" />
-                    <path className="wire-path" d="M 80,80 L 80,110 L 240,110 L 240,130" markerEnd="url(#arrow)" />
-                    
-                    <path className="wire-path glow" d="M 240,80 L 240,130" />
-                    <path className="wire-path" d="M 240,80 L 240,130" markerEnd="url(#arrow)" />
+                {/* Orbit ring */}
+                <circle cx="240" cy="240" r="148" fill="none" stroke="rgba(0,240,255,0.08)" strokeWidth="1" strokeDasharray="3 7" />
 
-                    <path className="wire-path glow" d="M 400,80 L 400,110 L 240,110 L 240,130" />
-                    <path className="wire-path" d="M 400,80 L 400,110 L 240,110 L 240,130" markerEnd="url(#arrow)" />
+                {/* Centre */}
+                <text className="diag-ct" x="240" y="233" textAnchor="middle">while</text>
+                <text className="diag-ct" x="240" y="248" textAnchor="middle">(alive)</text>
 
-                    {/* Row 2 to Row 3 */}
-                    <path className="wire-path glow" d="M 240,210 L 240,230 L 120,230 L 120,250" />
-                    <path className="wire-path" d="M 240,210 L 240,230 L 120,230 L 120,250" markerEnd="url(#arrow)" />
+                {/* ── EAT — flat-top hexagon (top) ── */}
+                <g className="diag-node diag-eat">
+                  <polygon points="175,57 305,57 325,92 305,127 175,127 155,92" />
+                  <text className="diag-em" x="240" y="78" textAnchor="middle" dominantBaseline="central">☕</text>
+                  <text className="diag-nt" x="240" y="100" textAnchor="middle" dominantBaseline="central">EAT</text>
+                  <text className="diag-ns" x="240" y="116" textAnchor="middle" dominantBaseline="central">Fuel for Logic</text>
+                </g>
 
-                    <path className="wire-path glow" d="M 240,210 L 240,230 L 360,230 L 360,250" />
-                    <path className="wire-path" d="M 240,210 L 240,230 L 360,230 L 360,250" markerEnd="url(#arrow)" />
+                {/* ── SLEEP — pill (right) ── */}
+                <g className="diag-node diag-sleep">
+                  <rect x="314" y="204" width="148" height="72" rx="36" />
+                  <text className="diag-em" x="388" y="229" textAnchor="middle" dominantBaseline="central">🌙</text>
+                  <text className="diag-nt" x="388" y="248" textAnchor="middle" dominantBaseline="central">SLEEP</text>
+                  <text className="diag-ns" x="388" y="263" textAnchor="middle" dominantBaseline="central">Recharge</text>
+                </g>
 
-                    {/* Row 3 to Row 4 */}
-                    <path className="wire-path glow" d="M 120,310 L 120,340" />
-                    <path className="wire-path" d="M 120,310 L 120,340" markerEnd="url(#arrow)" />
+                {/* ── CODE — chamfered octagon (bottom) ── */}
+                <g className="diag-node diag-code">
+                  <polygon points="166,360 314,360 334,388 314,416 166,416 146,388" />
+                  <text className="diag-em" x="240" y="372" textAnchor="middle" dominantBaseline="central">⌨️</text>
+                  <text className="diag-nt" x="240" y="392" textAnchor="middle" dominantBaseline="central">CODE</text>
+                  <text className="diag-ns" x="240" y="408" textAnchor="middle" dominantBaseline="central">Fix · Build · Ship</text>
+                </g>
 
-                    <path className="wire-path glow" d="M 360,310 L 360,340" />
-                    <path className="wire-path" d="M 360,310 L 360,340" markerEnd="url(#arrow)" />
-                  </>
-                ) : (
-                  <>
-                    {/* Simplified sequential flow for PCB */}
-                    {/* Row 1 to Row 2 */}
-                    <path className="wire-path glow" d="M 80,80 L 80,110 L 240,110 L 240,130" />
-                    <path className="wire-path" d="M 80,80 L 80,110 L 240,110 L 240,130" markerEnd="url(#arrow)" />
-                    
-                    <path className="wire-path glow" d="M 400,80 L 400,110 L 240,110 L 240,130" />
-                    <path className="wire-path" d="M 400,80 L 400,110 L 240,110 L 240,130" markerEnd="url(#arrow)" />
+                {/* ── REPEAT — diamond (left) ── */}
+                <g className="diag-node diag-repeat">
+                  <polygon points="92,180 152,240 92,300 32,240" />
+                  <text className="diag-em" x="92" y="224" textAnchor="middle" dominantBaseline="central">🔁</text>
+                  <text className="diag-nt" x="92" y="246" textAnchor="middle" dominantBaseline="central">REPEAT</text>
+                  <text className="diag-ns" x="92" y="262" textAnchor="middle" dominantBaseline="central">↻ loop()</text>
+                </g>
 
-                    {/* Row 2 to Row 3 */}
-                    <path className="wire-path glow" d="M 240,210 L 240,230 L 120,230 L 120,250" />
-                    <path className="wire-path" d="M 240,210 L 240,230 L 120,230 L 120,250" markerEnd="url(#arrow)" />
+                {/* EAT → SLEEP */}
+                <path className="wire-glow eat-wire" d="M 318,114 Q 395,145 388,204" />
+                <path className="wire-line eat-wire" d="M 318,114 Q 395,145 388,204" markerEnd="url(#arr)" />
 
-                    <path className="wire-path glow" d="M 240,210 L 240,230 L 360,230 L 360,250" />
-                    <path className="wire-path" d="M 240,210 L 240,230 L 360,230 L 360,250" markerEnd="url(#arrow)" />
+                {/* SLEEP → CODE */}
+                <path className="wire-glow sleep-wire" d="M 355,274 Q 370,345 314,360" />
+                <path className="wire-line sleep-wire" d="M 355,274 Q 370,345 314,360" markerEnd="url(#arr)" />
 
-                    {/* Row 3 to Row 4 */}
-                    <path className="wire-path glow" d="M 120,310 L 120,340" />
-                    <path className="wire-path" d="M 120,310 L 120,340" markerEnd="url(#arrow)" />
+                {/* CODE → REPEAT */}
+                <path className="wire-glow code-wire" d="M 158,410 Q 100,400 92,300" />
+                <path className="wire-line code-wire" d="M 158,410 Q 100,400 92,300" markerEnd="url(#arr)" />
 
-                    <path className="wire-path glow" d="M 240,310 L 240,340" />
-                    <path className="wire-path" d="M 240,310 L 240,340" markerEnd="url(#arrow)" />
-
-                    <path className="wire-path glow" d="M 360,310 L 360,340" />
-                    <path className="wire-path" d="M 360,310 L 360,340" markerEnd="url(#arrow)" />
-                  </>
-                )}
+                {/* REPEAT → EAT */}
+                <path className="wire-glow repeat-wire" d="M 92,180 Q 100,100 162,94" />
+                <path className="wire-line repeat-wire" d="M 92,180 Q 100,100 162,94" markerEnd="url(#arr)" />
               </svg>
-
-              <div key={activeDiagram} className="detailed-grid">
-                
-                {activeDiagram === 'hardware' ? (
-                  <>
-                    {/* Row 1 */}
-                    <div className="sys-block small span-2">
-                      <div className="sys-block-header justify-center"><Zap size={12} /> BMS</div>
-                      <div className="sys-block-body text-center dim">Li-Ion PMIC</div>
-                    </div>
-                    <div className="sys-block small span-2">
-                      <div className="sys-block-header justify-center"><Activity size={12} /> Clock</div>
-                      <div className="sys-block-body text-center dim">40MHz XTAL</div>
-                    </div>
-                    <div className="sys-block small span-2">
-                      <div className="sys-block-header justify-center"><Terminal size={12} /> Debug</div>
-                      <div className="sys-block-body text-center dim">JTAG / SWD</div>
-                    </div>
-
-                    {/* Row 2 */}
-                    <div className="sys-block mcu span-6">
-                      <div className="sys-block-header justify-center"><Cpu size={16} /> ESP32 / STM32 Core</div>
-                      <div className="sys-block-body mcu-tasks">
-                        <span className="task">FreeRTOS</span>
-                        <span className="task">Sensor Fusion</span>
-                        <span className="task">PID Loop</span>
-                        <span className="task">DMA/ISRs</span>
-                      </div>
-                    </div>
-
-                    {/* Row 3 */}
-                    <div className="sys-block small span-3">
-                      <div className="sys-block-header justify-center"><Activity size={14} /> Sensors</div>
-                      <div className="sys-block-body text-center dim">SPI/I2C IMU, GPS</div>
-                    </div>
-                    <div className="sys-block small span-3">
-                      <div className="sys-block-header justify-center"><Wifi size={14} /> Comms</div>
-                      <div className="sys-block-body text-center dim">MQTT / Wi-Fi / LoRa</div>
-                    </div>
-
-                    {/* Row 4 */}
-                    <div className="sys-block small span-3">
-                      <div className="sys-block-header justify-center"><Settings size={14} /> Actuators</div>
-                      <div className="sys-block-body text-center dim">BLDC Motor Drivers</div>
-                    </div>
-                    <div className="sys-block small span-3">
-                      <div className="sys-block-header justify-center"><CheckCircle size={14} /> Cloud IoT</div>
-                      <div className="sys-block-body text-center dim">AWS / Dashboard</div>
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    {/* Row 1: Schematic Prep */}
-                    <div className="sys-block small span-3">
-                      <div className="sys-block-header justify-center">
-                        <span className="step-num">1</span> <PenTool size={14} /> Schematic Capture
-                      </div>
-                      <div className="sys-block-body text-center dim">Symbols & Netnames</div>
-                    </div>
-                    <div className="sys-block small span-3">
-                      <div className="sys-block-header justify-center">
-                        <span className="step-num">2</span> <Activity size={14} /> Rules Check
-                      </div>
-                      <div className="sys-block-body text-center dim">ERC & Footprint Assoc</div>
-                    </div>
-
-                    {/* Row 2: Layout Design */}
-                    <div className="sys-block mcu span-6">
-                      <div className="sys-block-header justify-center">
-                        <span className="step-num">3</span> <Layers size={16} /> PCB Layout Workflow
-                      </div>
-                      <div className="sys-block-body mcu-tasks">
-                        <span className="task">Outline & Constraints</span>
-                        <span className="task">Component Placement</span>
-                        <span className="task">Routing & Silkscreen</span>
-                      </div>
-                    </div>
-
-                    {/* Row 3: Verification */}
-                    <div className="sys-block small span-3">
-                      <div className="sys-block-header justify-center">
-                        <span className="step-num">4</span> <Box size={14} /> Design Rules
-                      </div>
-                      <div className="sys-block-body text-center dim">DRC & Error Fixing</div>
-                    </div>
-                    <div className="sys-block small span-3">
-                      <div className="sys-block-header justify-center">
-                        <span className="step-num">5</span> <Terminal size={14} /> Gerber Export
-                      </div>
-                      <div className="sys-block-body text-center dim">Gerber & Drill Prep</div>
-                    </div>
-
-                    {/* Row 4: Manufacturing */}
-                    <div className="sys-block small span-2">
-                      <div className="sys-block-header justify-center">
-                        <Settings size={12} /> Fab
-                      </div>
-                      <div className="sys-block-body text-center dim">External Fab</div>
-                    </div>
-                    <div className="sys-block small span-2">
-                      <div className="sys-block-header justify-center">
-                        <Activity size={12} /> Test
-                      </div>
-                      <div className="sys-block-body text-center dim">Verify Connectivity</div>
-                    </div>
-                    <div className="sys-block small span-2">
-                      <div className="sys-block-header justify-center">
-                        <CheckCircle size={12} /> PCBA
-                      </div>
-                      <div className="sys-block-body text-center dim">Pick & Place</div>
-                    </div>
-                  </>
-                )}
-
-              </div>
             </div>
           </div>
-        </div>
         )}
+        {/* ── END RIGHT ────────────────────────────── */}
 
       </div>
     </section>

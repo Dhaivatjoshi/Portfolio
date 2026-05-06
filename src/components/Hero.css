@@ -190,8 +190,9 @@
 }
 
 /* ═══════════════════════════════════════════════════════════
-   RIGHT COLUMN — Block Diagram
+   RIGHT COLUMN — Circular Lifecycle Diagram
 ═══════════════════════════════════════════════════════════ */
+
 .hero-visual {
   position: relative;
   display: flex;
@@ -199,212 +200,171 @@
   align-items: center;
 }
 
-.system-block-diagram {
-  position: relative;
+.diagram-wrapper {
   width: 100%;
   max-width: 480px;
-  background: rgba(10, 12, 20, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  padding: 1.5rem;
-  /* blueprint grid background */
-  background-image:
-    linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
-  background-size: 20px 20px;
+  aspect-ratio: 1;
 }
 
-.diagram-toggle {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
-  position: relative;
-  z-index: 2;
-}
-
-.diagram-toggle button {
-  background: transparent;
-  border: none;
-  font-family: var(--font-display);
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--text-secondary);
-  cursor: pointer;
-  padding: 0 0 4px 0;
-  border-bottom: 2px solid transparent;
-  transition: all 0.3s ease;
-}
-
-.diagram-toggle button.active {
-  color: var(--accent-cyan);
-  border-bottom-color: var(--accent-cyan);
-}
-
-.diagram-wrapper {
-  position: relative;
-  width: 100%;
-}
-
-.diagram-wires {
-  position: absolute;
-  top: 0;
-  left: 0;
+.diagram-svg {
   width: 100%;
   height: 100%;
-  z-index: 1;
-  pointer-events: none;
+  overflow: visible;
 }
 
-/* fade transition for the inner grid */
-.detailed-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 1.5rem 1rem;
-  position: relative;
-  z-index: 2;
-  animation: fadeIn 0.5s ease forwards;
+/* Centre label */
+.diag-ct {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  fill: rgba(0, 240, 255, 0.35);
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-.sys-block.span-2 {
-  grid-column: span 2;
+/* Node shared */
+.diag-node polygon,
+.diag-node rect {
+  stroke-width: 1;
 }
 
-.sys-block.span-3 {
-  grid-column: span 3;
+.diag-em {
+  font-size: 18px;
 }
 
-.sys-block.span-6 {
-  grid-column: span 6;
+.diag-nt {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(5px);
+.diag-ns {
+  font-family: var(--font-mono);
+  font-size: 9px;
+}
+
+/* Per-node colours */
+.diag-eat polygon {
+  fill: rgba(0, 240, 255, 0.07);
+  stroke: rgba(0, 240, 255, 0.55);
+}
+
+.diag-eat .diag-nt {
+  fill: #00f0ff;
+}
+
+.diag-eat .diag-ns {
+  fill: rgba(0, 240, 255, 0.45);
+}
+
+.diag-sleep rect {
+  fill: rgba(168, 85, 247, 0.07);
+  stroke: rgba(168, 85, 247, 0.55);
+}
+
+.diag-sleep .diag-nt {
+  fill: #a855f7;
+}
+
+.diag-sleep .diag-ns {
+  fill: rgba(168, 85, 247, 0.45);
+}
+
+.diag-code polygon {
+  fill: rgba(251, 191, 36, 0.07);
+  stroke: rgba(251, 191, 36, 0.55);
+}
+
+.diag-code .diag-nt {
+  fill: #fbbf24;
+}
+
+.diag-code .diag-ns {
+  fill: rgba(251, 191, 36, 0.45);
+}
+
+.diag-repeat polygon {
+  fill: rgba(251, 113, 70, 0.07);
+  stroke: rgba(251, 113, 70, 0.55);
+}
+
+.diag-repeat .diag-nt {
+  fill: #fb7146;
+}
+
+.diag-repeat .diag-ns {
+  fill: rgba(251, 113, 70, 0.45);
+}
+
+/* Node pulse animation */
+.diag-node {
+  animation: nodePulse 3s ease-in-out infinite;
+}
+
+.diag-sleep {
+  animation-delay: 0.75s;
+}
+
+.diag-code {
+  animation-delay: 1.5s;
+}
+
+.diag-repeat {
+  animation-delay: 2.25s;
+}
+
+@keyframes nodePulse {
+
+  0%,
+  100% {
+    opacity: 0.7;
   }
 
-  to {
+  50% {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
-.wire-path {
+/* Arc wires */
+.wire-line,
+.wire-glow {
   fill: none;
-  stroke: var(--accent-cyan);
-  stroke-width: 2;
-  stroke-dasharray: 6 6;
-  animation: flowLine 2s linear infinite;
-  opacity: 0.6;
+  stroke-dasharray: 5 4;
+  animation: flowLine 1.8s linear infinite;
 }
 
-.wire-path.glow {
-  stroke-width: 6;
-  filter: blur(4px);
-  opacity: 0.2;
+.wire-line {
+  stroke-width: 1.5;
+  opacity: 0.75;
+}
+
+.wire-glow {
+  stroke-width: 7;
+  opacity: 0.12;
+  filter: blur(3px);
+}
+
+.eat-wire {
+  stroke: rgba(0, 240, 255, 0.9);
+}
+
+.sleep-wire {
+  stroke: rgba(168, 85, 247, 0.9);
+}
+
+.code-wire {
+  stroke: rgba(251, 191, 36, 0.9);
+}
+
+.repeat-wire {
+  stroke: rgba(251, 113, 70, 0.9);
 }
 
 @keyframes flowLine {
   to {
-    stroke-dashoffset: -12;
+    stroke-dashoffset: -18;
   }
-}
-
-.sys-block {
-  width: 100%;
-  background: rgba(15, 18, 28, 0.9);
-  border: 1px solid rgba(0, 240, 255, 0.3);
-  border-radius: 6px;
-  padding: 1rem;
-  box-shadow: 0 4px 15px rgba(0, 240, 255, 0.05);
-}
-
-.sys-block.small {
-  padding: 0.75rem;
-}
-
-.sys-block.mcu {
-  grid-column: 1 / -1;
-  text-align: center;
-  border-color: #a855f7;
-}
-
-.sys-block-header {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-display);
-  font-size: 0.85rem;
-  color: var(--accent-cyan);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 0.5rem;
-  border-bottom: 1px solid rgba(0, 240, 255, 0.1);
-  padding-bottom: 0.5rem;
-}
-
-.sys-block.mcu .sys-block-header {
-  color: #a855f7;
-  border-bottom-color: rgba(168, 85, 247, 0.2);
-}
-
-.step-num {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 18px;
-  height: 18px;
-  background: var(--accent-cyan);
-  color: #000;
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  font-weight: 900;
-  border-radius: 4px;
-  margin-right: 8px;
-  flex-shrink: 0;
-}
-
-.sys-block.mcu .step-num {
-  background: #a855f7;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.sys-block-body {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  color: var(--text-primary);
-  line-height: 1.5;
-}
-
-.sys-block-body.dim {
-  color: var(--text-secondary);
-  font-size: 0.75rem;
-}
-
-.mcu-tasks {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 0.75rem;
-}
-
-.task {
-  background: rgba(168, 85, 247, 0.1);
-  border: 1px solid rgba(168, 85, 247, 0.2);
-  padding: 3px 8px;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  color: #d8b4fe;
 }
 
 /* macOS traffic lights */

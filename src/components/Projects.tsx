@@ -23,7 +23,7 @@ interface Project {
   description: string;
   descriptionDe: string;
   tags: string[];
-  category: 'Power Electronics' | 'MCU Boards' | 'Sensor Modules' | 'RF & Wireless' | 'Motor Control';
+  category: 'Power Electronics' | 'Prototype Boards' | 'Sensor Modules' | 'RF & Wireless' | 'Motor Control';
   image: string;        // thumbnail shown on the card grid
   media?: MediaItem[];  // TODO: add extra photos/videos per project here
 }
@@ -52,7 +52,7 @@ Das System kann bis zu 1000 Punkte speichern, bevor ein Reset erforderlich ist
 
 Diese Lösung ist kostengünstig für die GPS-Datenaufzeichnung mittels Arduino und SD-Karte`,
     tags: ['Arduino', 'GPS', 'SD Card', 'Data Logging'],
-    category: 'MCU Boards',
+    category: 'Prototype Boards',
     image: '/images/project/IMG_1.jpg',
     media: [
       { type: 'image', src: '/images/project/IMG_1.jpg' },
@@ -75,8 +75,8 @@ By combining hardware sensors with mobile connectivity, this system significantl
 Das Modul ist mit einer mobilen Anwendung verbunden, die vordefinierte Notfallkontakte automatisch benachrichtigt. Die App liefert wichtige Details zum Opfer, einschließlich des Echtzeit-Standorts, um eine präzise Rettung zu ermöglichen.
 
 Durch die Kombination von Hardware-Sensoren und mobiler Konnektivität verkürzt dieses System die Reaktionszeiten in Notfällen erheblich und minimiert so die Schwere von Unfallfolgen.`,
-    tags: ['Accident Detection', 'IoT', 'Mobile App', 'Safety'],
-    category: 'Sensor Modules',
+    tags: ['IMU', 'IoT', 'Mobile App', 'Safety', 'Buzzer', 'Alert System'],
+    category: 'Prototype Boards',
     image: '/images/project/IMG_2.jpg',
     media: [
       { type: 'image', src: '/images/project/IMG_2.jpg' },
@@ -98,8 +98,8 @@ The system features 20 static colors and a random fade animation. For added conv
 Das Hardware-Setup umfasst drei RGB-LED-Streifen, die über NPN-Transistoren für 12V-Lasten angesteuert werden. Ein 3,3V-LDO-Regler sorgt für eine stabile Stromversorgung, während passive Komponenten eine zuverlässige Berührungserkennung gewährleisten.
 
 Das System bietet 20 statische Farben und eine Zufalls-Animation. Zusätzlich ist eine IR-Fernbedienung integriert, mit der die Lichteffekte bequem drahtlos gesteuert werden können.`,
-    tags: ['Arduino Pro Mini', 'Capacitive Touch', 'RGB LED', 'IR Remote'],
-    category: 'MCU Boards',
+    tags: ['Arduino Pro Mini', 'Capacitive Touch', 'RGB LED', 'IR Remote', 'Demo'],
+    category: 'Prototype Boards',
     image: '/images/project/IMG_3.jpg',
     media: [
       { type: 'image', src: '/images/project/IMG_3.jpg' },
@@ -120,8 +120,8 @@ The system is fully automated and requires no manual input, allowing users to na
 Sobald ein Hindernis erkannt wird, warnt das Gerät den Benutzer durch Vibrationen oder akustische Signale. Dieses multidisziplinäre Projekt verbindet Elektronik, Informatik und Medizintechnik.
 
 Das System arbeitet vollautomatisch und ermöglicht es Benutzern, sich in unbekannten Umgebungen mit mehr Vertrauen und Sicherheit zu bewegen.`,
-    tags: ['Ultrasonic', 'Accessibility', 'Sensor', 'Vibration'],
-    category: 'Sensor Modules',
+    tags: ['Ultrasonic', 'Accessibility', 'Sensor', 'Vibration', 'Demo'],
+    category: 'Prototype Boards',
     image: '/images/project/IMG_4.jpg',
   },
   {
@@ -138,8 +138,8 @@ The hardware was designed and prototyped using KiCad, with the final PCB fabrica
 Das System nutzt das MQTT-Protokoll für globale Konnektivität, sodass Inhalte von überall auf der Welt aktualisiert werden können. Eine maßgeschneiderte Android-App dient als nahtlose Schnittstelle für Sprachbefehle und Inhaltsverwaltung.
 
 Die Hardware wurde mit KiCad entworfen und prototypisiert, wobei die finale Leiterplatte durch chemisches Ätzen für maximale Zuverlässigkeit gefertigt wurde.`,
-    tags: ['ESP8266', 'P10 Matrix', 'MQTT', 'Voice Control'],
-    category: 'MCU Boards',
+    tags: ['ESP8266', 'P10 Matrix', 'MQTT', 'Voice Control', 'Demo'],
+    category: 'Prototype Boards',
     image: '/images/project/IMG_5.jpg',
   },
   {
@@ -157,7 +157,7 @@ Dieses Design macht spezialisierte USB-Controller-Chips überflüssig und bietet
 
 Das Projekt folgt dem AVR-ISP-Standard und gewährleistet Kompatibilität mit einer Vielzahl von Mikrocontrollern für eine zuverlässige Firmware-Bereitstellung.`,
     tags: ['AVR', 'ISP', 'USBasp', 'ATMega8'],
-    category: 'MCU Boards',
+    category: 'Prototype Boards',
     image: '/images/project/IMG_6.jpg',
   },
   {
@@ -199,7 +199,7 @@ Ein drahtloses Kommunikationssystem auf Basis von PIC-Mikrocontrollern und RF-Mo
   },
 ];
 
-const ALL_CATEGORIES = ['All', 'Power Electronics', 'MCU Boards', 'Sensor Modules', 'RF & Wireless', 'Motor Control'] as const;
+const ALL_CATEGORIES = ['All', 'Power Electronics', 'Prototype Boards', 'Motor Control'] as const;
 type FilterCategory = typeof ALL_CATEGORIES[number];
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -298,7 +298,7 @@ const Projects: React.FC = () => {
             className={`tab-btn ${activeTab === 'pcb-design' ? 'active' : ''}`}
             onClick={() => setActiveTab('pcb-design')}
           >
-            {language === 'en' ? 'PCB Deep Dive' : 'PCB Detailansicht'}
+            {language === 'en' ? 'PCB Design' : 'Leiterplattendesign'}
           </button>
         </div>
 
