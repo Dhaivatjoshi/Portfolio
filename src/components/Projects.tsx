@@ -58,7 +58,10 @@ Diese Lösung ist kostengünstig für die GPS-Datenaufzeichnung mittels Arduino 
       { type: 'image', src: '/docs/img/IMG_1.jpg' },
       { type: 'image', src: '/docs/img/IMG_1A.jpg' },
       { type: 'image', src: '/docs/img/IMG_1B.jpg' },
-      // { type: 'video', src: '/videos/project_1_demo.mp4', caption: 'Working prototype demonstration' }
+      { type: 'image', src: '/docs/img/IMG_1C.jpg' },
+      { type: 'image', src: '/docs/img/IMG_1D.jpg' },
+      { type: 'image', src: '/docs/img/IMG_1E.jpg' },
+      // { type: 'vi/deo', src: '/videos/project_1_demo.mp4', caption: 'Working prototype demonstration' }
     ]
   },
   {
@@ -152,7 +155,7 @@ Die Hardware wurde mit KiCad entworfen und prototypisiert, wobei die finale Leit
     media: [
       { type: 'image', src: '/docs/img/IMG_5.jpg' },
       { type: 'image', src: '/docs/img/IMG_5A.jpg' },
-      { type: 'video', src: '/docs/videos/VID_5.mp4' }
+      // { type: 'video', src: '/docs/videos/VID_5.mp4' }
     ]
   },
   {
@@ -195,6 +198,12 @@ Beide Systeme bieten manuelle Steuerungsmöglichkeiten neben den Smart-Funktione
     image: '/docs/img/IMG_7.jpg',
     media: [
       { type: 'image', src: '/docs/img/IMG_7.jpg' },
+      { type: 'image', src: '/docs/img/IMG_7A.jpg' },
+      { type: 'image', src: '/docs/img/IMG_7B.jpg' },
+      { type: 'image', src: '/docs/img/IMG_7C.jpg' },
+      { type: 'video', src: '/docs/vid/VID_7.mp4' },
+      { type: 'video', src: '/docs/vid/VID_7A.mp4' },
+      // { type: 'video', src: '/docs/vid/VID_7B.mp4' },
     ]
   },
   {
