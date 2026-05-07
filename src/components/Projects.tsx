@@ -203,7 +203,7 @@ Beide Systeme bieten manuelle Steuerungsmöglichkeiten neben den Smart-Funktione
       { type: 'image', src: '/docs/img/IMG_7C.jpg' },
       { type: 'video', src: '/docs/videos/VID_7.mp4' },
       { type: 'video', src: '/docs/videos/VID_7A.mp4' },
-      { type: 'video', src: '/docs/videos/VID_7B.mp4' },
+      { type: 'video', src: 'https://youtube.com/shorts/o2yQO0yKD5w?feature=share' },
     ]
   },
   {
