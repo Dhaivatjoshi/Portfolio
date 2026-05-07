@@ -39,7 +39,7 @@ const Experience: React.FC = () => {
       type: 'edu'
     },
     {
-      degree: 'B.Tech in Electronics and Communication',
+      degree: language === 'en' ? 'Bachelor of Engineering in Electronics and Communication' : 'B.E in Nachrichtenelektronik und Kommunikation',
       school: 'CHARUSAT University',
       link: 'https://www.charusat.ac.in/',
       date: '06/2017 - 05/2021 | Anand, India',
@@ -50,9 +50,9 @@ const Experience: React.FC = () => {
   return (
     <section id="experience" className="timeline-section">
       <div className="container">
-        
+
         <div className="timeline-grid">
-          
+
           {/* Experience Column */}
           <div className="timeline-column">
             <h2 className="timeline-title">

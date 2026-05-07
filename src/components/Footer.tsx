@@ -5,7 +5,11 @@ import './Footer.css';
 
 const Footer: React.FC = () => {
   const { language } = useLanguage();
-  // const currentYear = new Date().getFullYear();
+  const lastUpdated = new Date('2026-05-07').toLocaleDateString(language === 'en' ? 'en-GB' : 'de-DE', {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric',
+  });
 
   return (
     <footer className="footer-section">
@@ -20,6 +24,11 @@ const Footer: React.FC = () => {
             {language === 'en' ? 'Made with' : 'Erstellt mit'}{' '}
             <Heart size={16} className="heart-icon" />{' '}
             {language === 'en' ? 'and precision engineering' : 'und Präzisionstechnik'}
+          </div>
+
+          <div className="footer-last-updated">
+            {language === 'en' ? 'Last updated' : 'Zuletzt aktualisiert'}{': '}
+            <span className="footer-last-updated-date">{lastUpdated}</span>
           </div>
         </div>
       </div>

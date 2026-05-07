@@ -53,11 +53,11 @@ Das System kann bis zu 1000 Punkte speichern, bevor ein Reset erforderlich ist
 Diese Lösung ist kostengünstig für die GPS-Datenaufzeichnung mittels Arduino und SD-Karte`,
     tags: ['Arduino', 'GPS', 'SD Card', 'Data Logging'],
     category: 'Prototype Boards',
-    image: '/images/project/IMG_1.jpg',
+    image: '/docs/img/IMG_1.jpg',
     media: [
-      { type: 'image', src: '/images/project/IMG_1.jpg' },
-      { type: 'image', src: '/images/project/IMG_1A.jpg' },
-      { type: 'image', src: '/images/project/IMG_1B.jpg' },
+      { type: 'image', src: '/docs/img/IMG_1.jpg' },
+      { type: 'image', src: '/docs/img/IMG_1A.jpg' },
+      { type: 'image', src: '/docs/img/IMG_1B.jpg' },
       // { type: 'video', src: '/videos/project_1_demo.mp4', caption: 'Working prototype demonstration' }
     ]
   },
@@ -77,11 +77,11 @@ Das Modul ist mit einer mobilen Anwendung verbunden, die vordefinierte Notfallko
 Durch die Kombination von Hardware-Sensoren und mobiler Konnektivität verkürzt dieses System die Reaktionszeiten in Notfällen erheblich und minimiert so die Schwere von Unfallfolgen.`,
     tags: ['IMU', 'IoT', 'Mobile App', 'Safety', 'Buzzer', 'Alert System'],
     category: 'Prototype Boards',
-    image: '/images/project/IMG_2.jpg',
+    image: '/docs/img/IMG_2.jpg',
     media: [
-      { type: 'image', src: '/images/project/IMG_2.jpg' },
-      { type: 'image', src: '/images/project/IMG_2A.jpg' },
-      { type: 'image', src: '/images/project/IMG_2B.jpg' },
+      { type: 'image', src: '/docs/img/IMG_2.jpg' },
+      { type: 'image', src: '/docs/img/IMG_2A.jpg' },
+      { type: 'image', src: '/docs/img/IMG_2B.jpg' },
     ]
   },
   {
@@ -100,10 +100,10 @@ Das Hardware-Setup umfasst drei RGB-LED-Streifen, die über NPN-Transistoren fü
 Das System bietet 20 statische Farben und eine Zufalls-Animation. Zusätzlich ist eine IR-Fernbedienung integriert, mit der die Lichteffekte bequem drahtlos gesteuert werden können.`,
     tags: ['Arduino Pro Mini', 'Capacitive Touch', 'RGB LED', 'IR Remote', 'Demo'],
     category: 'Prototype Boards',
-    image: '/images/project/IMG_3.jpg',
+    image: '/docs/img/IMG_3.jpg',
     media: [
-      { type: 'image', src: '/images/project/IMG_3.jpg' },
-      { type: 'image', src: '/images/project/IMG_3A.jpg' },
+      { type: 'image', src: '/docs/img/IMG_3.jpg' },
+      { type: 'image', src: '/docs/img/IMG_3A.jpg' },
     ]
   },
   {
@@ -122,7 +122,15 @@ Sobald ein Hindernis erkannt wird, warnt das Gerät den Benutzer durch Vibration
 Das System arbeitet vollautomatisch und ermöglicht es Benutzern, sich in unbekannten Umgebungen mit mehr Vertrauen und Sicherheit zu bewegen.`,
     tags: ['Ultrasonic', 'Accessibility', 'Sensor', 'Vibration', 'Demo'],
     category: 'Prototype Boards',
-    image: '/images/project/IMG_4.jpg',
+    image: '/docs/img/IMG_4.jpg',
+    media: [
+      { type: 'image', src: '/docs/img/IMG_4.jpg' },
+      { type: 'image', src: '/docs/img/IMG_4A.jpg' },
+      { type: 'image', src: '/docs/img/IMG_4B.jpg' },
+      { type: 'image', src: '/docs/img/IMG_4C.jpg' },
+      { type: 'image', src: '/docs/img/IMG_4D.jpg' },
+      { type: 'video', src: '/docs/videos/VID_4.mp4' }
+    ]
   },
   {
     id: 5,
@@ -140,7 +148,12 @@ Das System nutzt das MQTT-Protokoll für globale Konnektivität, sodass Inhalte 
 Die Hardware wurde mit KiCad entworfen und prototypisiert, wobei die finale Leiterplatte durch chemisches Ätzen für maximale Zuverlässigkeit gefertigt wurde.`,
     tags: ['ESP8266', 'P10 Matrix', 'MQTT', 'Voice Control', 'Demo'],
     category: 'Prototype Boards',
-    image: '/images/project/IMG_5.jpg',
+    image: '/docs/img/IMG_5.jpg',
+    media: [
+      { type: 'image', src: '/docs/img/IMG_5.jpg' },
+      { type: 'image', src: '/docs/img/IMG_5A.jpg' },
+      { type: 'video', src: '/docs/videos/VID_5.mp4' }
+    ]
   },
   {
     id: 6,
@@ -158,7 +171,10 @@ Dieses Design macht spezialisierte USB-Controller-Chips überflüssig und bietet
 Das Projekt folgt dem AVR-ISP-Standard und gewährleistet Kompatibilität mit einer Vielzahl von Mikrocontrollern für eine zuverlässige Firmware-Bereitstellung.`,
     tags: ['AVR', 'ISP', 'USBasp', 'ATMega8'],
     category: 'Prototype Boards',
-    image: '/images/project/IMG_6.jpg',
+    image: '/docs/img/IMG_6.jpg',
+    media: [
+      { type: 'image', src: '/docs/img/IMG_6.jpg' },
+    ]
   },
   {
     id: 7,
@@ -176,8 +192,10 @@ Die zweite Plattform nutzt einen ESP8266 (NodeMCU) für die IoT-Steuerung. Sie v
 Beide Systeme bieten manuelle Steuerungsmöglichkeiten neben den Smart-Funktionen und stellen so eine vielseitige Lösung für die moderne Hausautomation dar.`,
     tags: ['IoT', 'Home Automation', 'Bluetooth', 'ESP8266'],
     category: 'Power Electronics',
-    image: '/images/project/IMG_7.jpg',
-
+    image: '/docs/img/IMG_7.jpg',
+    media: [
+      { type: 'image', src: '/docs/img/IMG_7.jpg' },
+    ]
   },
   {
     id: 8,
@@ -195,7 +213,10 @@ Das Fahrzeug nutzt Omni-Räder für maximale Wendigkeit auf engem Raum. Der Antr
 Ein drahtloses Kommunikationssystem auf Basis von PIC-Mikrocontrollern und RF-Modulen garantiert eine zuverlässige Steuerung über große Entfernungen für Fernüberwachungsanwendungen.`,
     tags: ['Robotics', 'IoT', 'Wireless Video', 'Motor Control'],
     category: 'Motor Control',
-    image: '/images/project/IMG_8.jpg',
+    image: '/docs/img/IMG_8.jpg',
+    media: [
+      { type: 'image', src: '/docs/img/IMG_8.jpg' },
+    ]
   },
 ];
 
@@ -250,9 +271,9 @@ const Projects: React.FC = () => {
   const pcbFeatures = [
     {
       name: 'Non-Isolated AC-DC Power Supply',
-      modelUrl: '/models/pcb.gltf',
-      schematic: '/images/schematic.jpg',
-      layout: '/images/layout.jpg',
+      modelUrl: '/docs/PCB/Design_1/pcb.gltf',
+      schematic: '/docs/PCB/Design_1/schematic.jpg',
+      layout: '/docs/PCB/Design_1/layout.jpg',
       specs: {
         layers: '2-Layer',
         dimensions: '65 × 45 mm',
