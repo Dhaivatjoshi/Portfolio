@@ -155,7 +155,7 @@ Die Hardware wurde mit KiCad entworfen und prototypisiert, wobei die finale Leit
     media: [
       { type: 'image', src: '/docs/img/IMG_5.jpg' },
       { type: 'image', src: '/docs/img/IMG_5A.jpg' },
-      { type: 'video', src: '/docs/videos/VID_5.mp4' }
+      { type: 'video', src: 'https://www.youtube.com/embed/hgi-9XjMkho' }
     ]
   },
   {
@@ -497,13 +497,24 @@ const Projects: React.FC = () => {
             <div className="lightbox-image-panel">
               <div className="lb-main-media">
                 {lbMedia[lbMediaIdx]?.type === 'video' ? (
-                  <video
-                    key={lbMedia[lbMediaIdx].src}
-                    src={lbMedia[lbMediaIdx].src}
-                    controls
-                    autoPlay
-                    className="lb-video"
-                  />
+                  lbMedia[lbMediaIdx].src.includes('youtube.com') ? (
+                    <iframe
+                      key={lbMedia[lbMediaIdx].src}
+                      src={lbMedia[lbMediaIdx].src}
+                      title="Project Demo"
+                      className="lb-video"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  ) : (
+                    <video
+                      key={lbMedia[lbMediaIdx].src}
+                      src={lbMedia[lbMediaIdx].src}
+                      controls
+                      autoPlay
+                      className="lb-video"
+                    />
+                  )
                 ) : (
                   <img
                     key={lbMedia[lbMediaIdx]?.src}
