@@ -155,7 +155,7 @@ Die Hardware wurde mit KiCad entworfen und prototypisiert, wobei die finale Leit
     media: [
       { type: 'image', src: '/docs/img/IMG_5.jpg' },
       { type: 'image', src: '/docs/img/IMG_5A.jpg' },
-      // { type: 'video', src: '/docs/videos/VID_5.mp4' }
+      { type: 'video', src: '/docs/videos/VID_5.mp4' }
     ]
   },
   {
@@ -203,7 +203,7 @@ Beide Systeme bieten manuelle Steuerungsmöglichkeiten neben den Smart-Funktione
       { type: 'image', src: '/docs/img/IMG_7C.jpg' },
       { type: 'video', src: '/docs/videos/VID_7.mp4' },
       { type: 'video', src: '/docs/videos/VID_7A.mp4' },
-      // { type: 'video', src: '/docs/vid/VID_7B.mp4' },
+      { type: 'video', src: '/docs/videos/VID_7B.mp4' },
     ]
   },
   {
@@ -242,7 +242,7 @@ const Projects: React.FC = () => {
   const [lbMediaIdx, setLbMediaIdx] = useState(0);
   const [visibleCount, setVisibleCount] = useState(8);
   const [activeBoardIdx, setActiveBoardIdx] = useState(0);
-  
+
   // Disable body scroll when lightbox is open
   React.useEffect(() => {
     if (selectedProject) {
