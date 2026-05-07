@@ -242,6 +242,18 @@ const Projects: React.FC = () => {
   const [lbMediaIdx, setLbMediaIdx] = useState(0);
   const [visibleCount, setVisibleCount] = useState(8);
   const [activeBoardIdx, setActiveBoardIdx] = useState(0);
+  
+  // Disable body scroll when lightbox is open
+  React.useEffect(() => {
+    if (selectedProject) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedProject]);
 
   // Filter projects by category
   const filteredProjects = useMemo(() => {
@@ -303,7 +315,7 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <section id="projects" className="projects-section">
+    <section id="projects" className={`projects-section ${selectedProject ? 'has-lightbox' : ''}`}>
       <div className="container">
         <h2 className="section-title">
           <span className="title-highlight">{language === 'en' ? 'Hardware' : 'Hardware'}</span>{' '}

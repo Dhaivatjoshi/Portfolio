@@ -7,6 +7,11 @@
   z-index: 2;
 }
 
+.projects-section.has-lightbox {
+  z-index: 1100; /* Raise section above Navbar (1000) and other sections (2) when modal is open */
+}
+
+
 .projects-subtitle {
   color: var(--text-secondary);
   font-size: 1.1rem;
