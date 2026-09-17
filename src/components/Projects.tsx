@@ -177,6 +177,9 @@ Das Projekt folgt dem AVR-ISP-Standard und gewährleistet Kompatibilität mit ei
     image: '/docs/img/IMG_6.jpg',
     media: [
       { type: 'image', src: '/docs/img/IMG_6.jpg' },
+      { type: 'image', src: '/docs/img/IMG_6A.jpg' },
+      { type: 'image', src: '/docs/img/IMG_6B.jpg' },
+      { type: 'image', src: '/docs/img/IMG_6C.jpg' },
     ]
   },
   {
