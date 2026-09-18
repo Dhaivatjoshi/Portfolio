@@ -310,7 +310,7 @@ const Projects: React.FC = () => {
     },
     {
       name: 'RP2040 MacroBoard - v2.0',
-      modelUrl: '/docs/PCB/Design_2/MacroBoard_v2.0.gltf',
+      modelUrl: '/docs/PCB/Design_2/MacroBoard_v2.0.glb',
       schematic: '/docs/PCB/Design_2/MacroBoard_v2.0_schematic.jpg',
       layout: '/docs/PCB/Design_2/MacroBoard_v2.0_layout.jpg',
       specs: { layers: '2-Layer', dimensions: '100 × 100 mm', components: '103 SMD', software: 'KiCad 10.0', designTime: '~3 weeks', status: 'Production v2.0', highlight: '...' },
