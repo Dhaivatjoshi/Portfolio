@@ -308,13 +308,13 @@ const Projects: React.FC = () => {
         highlight: 'Achieved >88% efficiency at full load with onboard NTC thermal protection and EMI filter stage.',
       },
     },
-    // {
-    //   name: 'STM32 Dev Board',
-    //   modelUrl: '/models/pcb2.gltf',
-    //   schematic: '/images/schematic2.jpg',
-    //   layout: '/images/layout2.jpg',
-    //   specs: { layers: '4-Layer', dimensions: '80 × 60 mm', components: '72 SMD', software: 'KiCad 7', designTime: '~5 weeks', status: 'Production v1.1', highlight: '...' },
-    // },
+    {
+      name: 'RP2040 MacroBoard - v2.0',
+      modelUrl: '/docs/PCB/Design_2/MacroBoard_v2.0.gltf',
+      schematic: '/docs/PCB/Design_2/MacroBoard_v2.0_schematic.jpg',
+      layout: '/docs/PCB/Design_2/MacroBoard_v2.0_layout.jpg',
+      specs: { layers: '2-Layer', dimensions: '100 × 100 mm', components: '103 SMD', software: 'KiCad 10.0', designTime: '~3 weeks', status: 'Production v2.0', highlight: '...' },
+    },
   ];
 
   return (
